@@ -7,7 +7,7 @@ export default function index({ posts }) {
         {posts.map((post) => {
           return (
             <li key={post.id}>
-              <Link href={`/posts/${post.id}`}>
+              <Link href={`/posts_ssg/${post.id}`}>
                 <a>{post.title}</a>
               </Link>
             </li>
@@ -18,9 +18,8 @@ export default function index({ posts }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
   const posts = await res.json();
-  console.log(posts);
   return { props: { posts } };
 }

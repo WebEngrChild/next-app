@@ -20,6 +20,16 @@ export default function Home() {
             <a>About</a>
           </Link>
         </li>
+        <li>
+          <Link href="/posts">
+            <a>POST_SSR</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/posts_ssg">
+            <a>POST_SSG</a>
+          </Link>
+        </li>
       </ul>
       <h1>Hello Next.js</h1>
     </div>

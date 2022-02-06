@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Head from 'next/head';
-
 import styles from '../styles/Home.module.css'; 
 
 const products = [{ name: 'bag' }, { name: 'shoes' }, { name: 'socks' }];
@@ -30,6 +29,9 @@ export default function Home() {
           content={`${products[1].name}のページ`}
         />
       </Head>
+      <div>
+      <h1 className="text-6xl">Hello Next.js</h1>
+      </div>
       <ul>
         <li>
           <Link href="/about">

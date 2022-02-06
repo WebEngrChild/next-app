@@ -29,6 +29,16 @@ export default function Home() {
             <a>POST_SSG</a>
           </Link>
         </li>
+        <li>
+          <Link href="/products/bag">
+            <a>Products/bag</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/products/bag/red">
+            <a>Products/bag/red</a>
+          </Link>
+        </li>
       </ul>
       <h1>Hello Next.js</h1>
     </div>

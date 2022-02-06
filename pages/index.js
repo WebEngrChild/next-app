@@ -1,6 +1,23 @@
 import Link from 'next/link';
 import Head from 'next/head';
+
+import styles from '../styles/Home.module.css'; 
+
 const products = [{ name: 'bag' }, { name: 'shoes' }, { name: 'socks' }];
+function Content({ type }) {
+  return (
+    <div>
+      <p>ここにコンテンツが入ります。</p>
+      {/* ここのp styleはcontentのみに適応される。globalをつけると外側にも利用される */}
+      <style global jsx>{`
+        p {
+          color: ${type == 'alert' ? 'red' : 'blue'};
+        }
+      `}</style>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div>
@@ -39,8 +56,15 @@ export default function Home() {
             <a>Products/bag/red</a>
           </Link>
         </li>
+        <li>
+          <Link href="/posts_swr">
+            <a>SWR</a>
+          </Link>
+        </li>
       </ul>
-      <h1>Hello Next.js</h1>
+      <h1 className={styles.headingModule}>Hello Next.js</h1>
+      <Content type="alert"/>
+      <p>Contentsタグ内のcssが外部に適応されています。</p>
     </div>
   );
 }

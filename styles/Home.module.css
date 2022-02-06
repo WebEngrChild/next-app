@@ -114,3 +114,7 @@
     flex-direction: column;
   }
 }
+
+.headingModule {
+  background-color: rgba(246, 214, 237, 0.89);
+}

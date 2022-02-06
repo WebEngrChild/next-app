@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import Head from 'next/head';
 const products = [{ name: 'bag' }, { name: 'shoes' }, { name: 'socks' }];
@@ -21,7 +20,7 @@ export default function Home() {
           </Link>
         </li>
         <li>
-          <Link href="/posts">
+          <Link href="/posts_ssr">
             <a>POST_SSR</a>
           </Link>
         </li>

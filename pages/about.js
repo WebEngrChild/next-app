@@ -4,6 +4,8 @@ export default function About() {
   return <h1>About Page</h1>
 }
 
+// {page}には<Component {...pageProps} />が渡されている
+// すなわちそのファイル内でexportされている関数
 About.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>
 };

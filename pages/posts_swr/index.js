@@ -1,5 +1,7 @@
+// フックをswrから取得
 import useSWR from 'swr';
 
+// このfetcher関数はuseSWR内で利用される引数(url)には第一引数のurlが渡される
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function index() {

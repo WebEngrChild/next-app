@@ -1,4 +1,13 @@
 import Link from "next/link";
+// SSGなのでビルドの段階でデータをfetch
+// 変化のないデータにおすすめ
+export async function getStaticProps() {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+  const posts = await res.json();
+  return { props: { posts } };
+}
+
+// fetchしたデータをpropsの形で引数postsに渡す
 export default function index({ posts }) {
   return (
     <div>
@@ -16,10 +25,4 @@ export default function index({ posts }) {
       </ul>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
-  const posts = await res.json();
-  return { props: { posts } };
 }

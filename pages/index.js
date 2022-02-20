@@ -30,6 +30,7 @@ export default function Home() {
         />
       </Head>
       <div>
+      {/* 以下がtailwindCSS部分 */}
       <h1 className="text-6xl">Hello Next.js</h1>
       </div>
       <ul>
@@ -64,7 +65,8 @@ export default function Home() {
           </Link>
         </li>
       </ul>
-      <h1 className={styles.headingModule}>Hello Next.js</h1>
+      {/* 以下がtailwindCSS部分 */}
+      <h1 className="text-gray-500">Hello Next.js</h1>
       <Content type="alert"/>
       <p>Contentsタグ内のcssが外部に適応されています。</p>
     </div>

@@ -21,6 +21,7 @@ function Content({ type }) {
 export default function Home() {
   return (
     <div>
+      {/* meta情報を管理する<Head>にpropsで情報を渡している */}
       <Head>
         <title>{products[1].name}</title>
         <meta name="description" content={`${products[1].name}のページ`} />

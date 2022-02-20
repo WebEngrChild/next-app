@@ -5,7 +5,7 @@ export default function About() {
 }
 
 // {page}には<Component {...pageProps} />が渡されている
-// すなわちそのファイル内でexportされている関数
+// すなわちそのファイル内でexportされている関数(上記でいうところのfunction About)
 About.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>
 };
